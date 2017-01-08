@@ -1,0 +1,14 @@
+// Border Radius
+@mixin border-radius($border) {
+    border-radius: $border;
+}
+
+// Box Shadow
+@mixin box-shadow($x: "none", $y: 0, $radius: 0, $color: "") {
+    $shadow: $x;
+    @if $x != "none" {
+        $shadow: $x $y $radius $color;
+    }
+
+    box-shadow: $shadow;
+}

@@ -6,12 +6,15 @@ module.exports = function (grunt) {
         pkg: grunt.file.readJSON('package.json'),
 
         sass: {
-            options: {
-                style: 'compressed',
-                //compass: true
-            },
-            files: {
-                'assets/css/main.css': 'assets/scss/main.scss'
+            dist: {
+                options: {
+                    style: 'compressed',
+                    //compass: true
+                },
+                files: {
+                    'assets/css/main.css' : 'assets/scss/main.scss',
+                    'assets/css/materialize.css' : 'assets/scss/materialize/materialize.scss'
+                }
             }
         },
 
@@ -22,10 +25,11 @@ module.exports = function (grunt) {
                     terminate: true
                 },
                 files: [
+                    'assets/scss/**/*.scss',
                     'assets/scss/*.scss'
                 ],
                 tasks: [
-                    'sass:main'
+                    'sass'
                 ]
             }
         }

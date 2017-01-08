@@ -1,0 +1,19 @@
+/**
+ * Contain all the app styles
+ */
+
+
+html, body {
+	font-family: $font;
+	background-color: $theme-dirty-white;
+}
+
+.badge {
+	color: $white !important;
+	background-color: $theme-red;
+	@include border-radius(20px);
+	min-width: 1.5rem !important; 
+	font-size: 0.8rem !important;
+	height: 16px !important;
+	line-height: 16px !important;
+}
